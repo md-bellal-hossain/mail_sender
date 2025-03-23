@@ -40,8 +40,12 @@ This will install **PHPMailer** via Composer.
 In the `send_mail.php` file, configure your SMTP settings for sending the email.
 
 ```php
+// SMTP Configuration
 $mail->Username   = 'your-email@gmail.com'; // Your email
 $mail->Password   = 'your-app-password';    // Your Gmail App Password
+
+ // Email Details
+        $mail->setFrom('your-email@gmail.com', 'Your_Name');
 ```
 
 - Generate an **App Password** if you're using Gmail. For security, avoid using your main Gmail password. [Learn more about Gmail App Passwords](https://myaccount.google.com/apppasswords).
