@@ -1,70 +1,93 @@
 ```markdown
-# PHPMailer Email Sender with Bootstrap Form
+# Email Sender with PHPMailer
 
-A simple PHP project that allows users to send emails using PHPMailer with a Bootstrap-based form. Supports attachments and SMTP authentication.
+This project demonstrates how to send an email using PHPMailer with a simple web form built using **PHP** and **Bootstrap**.
 
-## 🚀 Features
-- Send emails using **PHPMailer**
-- SMTP authentication (supports Gmail, Outlook, etc.)
-- **Bootstrap 5** responsive form
-- File attachment support
-- Success & error messages using **Bootstrap alerts**
+## Features
 
-## 📌 Prerequisites
-- PHP 7+ installed
-- Composer installed (`https://getcomposer.org/`)
-- A valid SMTP email account (e.g., Gmail, Outlook, etc.)
+- Send an email via **SMTP** (configured for Gmail).
+- Attach files with the email.
+- Display feedback messages using **Bootstrap alerts**.
+- Simple and responsive design using **Bootstrap 5**.
 
-## 📥 Installation
+## Prerequisites
 
-### 1️⃣ Clone the repository:
+Make sure you have the following installed:
+
+- PHP (v7.4 or higher)
+- Composer (for dependency management)
+- A Gmail account (or any other SMTP provider)
+
+## Installation
+
+### 1. Clone the repository
+Clone this repository to your local machine:
+
 ```bash
-git clone https://github.com/yourusername/phpmailer-email-sender.git
-cd phpmailer-email-sender
+https://github.com/md-bellal-hossain/mail_sender.git
 ```
 
-### 2️⃣ Install dependencies:
+### 2. Install Dependencies
+Navigate to the project directory and run the following command to install the necessary PHP libraries via Composer:
+
 ```bash
 composer install
 ```
 
-### 3️⃣ Configure SMTP Settings:
-Rename `config.example.php` to `config.php` and update with your credentials:
+This will install **PHPMailer** via Composer.
+
+### 3. Configure Email
+In the `send_mail.php` file, configure your SMTP settings for sending the email.
+
 ```php
-define('SMTP_HOST', 'smtp.gmail.com');
-define('SMTP_USER', 'your-email@gmail.com');
-define('SMTP_PASS', 'your-app-password'); // Use an App Password instead of your real password
-define('SMTP_PORT', 587);
+$mail->Username   = 'your-email@gmail.com'; // Your email
+$mail->Password   = 'your-app-password';    // Your Gmail App Password
 ```
 
-### 4️⃣ Run the Project:
-Start a local PHP server:
+- Generate an **App Password** if you're using Gmail. For security, avoid using your main Gmail password. [Learn more about Gmail App Passwords](https://myaccount.google.com/apppasswords).
+
+### 4. Run the Project
+You can start a local server using PHP's built-in server:
+
 ```bash
 php -S localhost:8000
 ```
-Open `http://localhost:8000/index.php` in your browser.
 
-## 📝 Usage
-1. Fill in the **To, Subject, Body, and Attachment** fields.
-2. Click **"Send Email"** to send your message.
-3. A success or error message will appear.
+Now you can access the project by navigating to `http://localhost:8000` in your browser.
 
-## ⚠️ Troubleshooting
-- **Error: "SMTP connect() failed"** → Enable **Less Secure Apps** or use an [App Password](https://myaccount.google.com/apppasswords).
-- **Emails going to spam?** → Configure **DKIM, SPF, and DMARC** on your domain.
-- **Using Gmail?** → Enable **IMAP** in Gmail settings.
+## Usage
 
-## 📜 License
-This project is open-source and available under the [MIT License](LICENSE).
+1. Open the web form at `http://localhost:8000/index.php`.
+2. Fill out the email form with the following fields:
+   - **To**: The recipient's email address.
+   - **Subject**: The subject of the email.
+   - **Body**: The content of the email.
+   - **Attachment**: Optionally attach a file.
+3. Click **Send Email** to send the email.
 
----
+The form will show a success message if the email was sent successfully, or an error message if something went wrong.
 
-🔗 **Follow for more updates** → [GitHub Profile](https://github.com/md-bellal-hossain)
+## Contributing
+
+Feel free to fork this repository and submit pull requests if you want to contribute to this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions, please contact **Md. Bellal Hossain** at [bellalhossain4365@gmail.com](mailto:bellalhossain4365@gmail.com).
+
 ```
 
-### **Next Steps**
-- Replace `yourusername` with your actual GitHub username.
-- Update the repository name if needed.
-- Add a `config.example.php` file for users to configure SMTP settings.
+### Key Sections in the `README.md`:
 
-Let me know if you need any modifications! 🚀
+1. **Project Name**: Describes the project (Email Sender with PHPMailer).
+2. **Features**: Lists the key features of the application.
+3. **Prerequisites**: Tells users the dependencies required (PHP, Composer, Gmail).
+4. **Installation**: Provides installation steps and configuration.
+5. **Usage**: Explains how to use the email form.
+6. **Contributing**: Encourages contributions and provides a link to contributing.
+7. **License**: Adds a standard license reference (MIT in this case).
+8. **Contact**: Your email for questions.
