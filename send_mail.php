@@ -17,13 +17,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'rabelisback@gmail.com';
-        $mail->Password   = 'eijkafjpbxjxbiue';
+        $mail->Username   = 'your_mail_address';
+        $mail->Password   = 'your_mail_app_password';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
         // Email Details
-        $mail->setFrom('rabelisback@gmail.com', 'Bellal Hossain');
+        $mail->setFrom('your_mail_address', 'your_name');
         $mail->addAddress($to);
 
         $mail->isHTML(true);
