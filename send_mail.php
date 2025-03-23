@@ -17,13 +17,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'your_mail_address';
-        $mail->Password   = 'your_mail_app_password';
+        $mail->Username   = 'your-email@gmail.com'; // Your email
+        $mail->Password   = 'your-app-password';    // Your Gmail App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
         // Email Details
-        $mail->setFrom('your_mail_address', 'your_name');
+        $mail->setFrom('your-email@gmail.com', 'your_name');
         $mail->addAddress($to);
 
         $mail->isHTML(true);
